@@ -10,4 +10,11 @@ export default defineSchema({
 	})
 		.index("by_clerkId", ["clerkId"]),
 
+	courses: defineTable({
+		title: v.string(),
+		description: v.string(),
+		imageUrl: v.string(),
+		price: v.number(),
+	}),
+
 });
