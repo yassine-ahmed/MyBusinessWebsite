@@ -7,7 +7,7 @@ const Navbar = () => {
 	return (
 		<nav className='flex justify-between items-center py-4 px-6 bg-background border-b'>
 			<Link href={"/"} className='text-xl font-extrabold text-primary flex items-center gap-2'>
-				MasterClass <GraduationCap className='size-6' />
+				YACODING		
 			</Link>
 
 			<div className='flex items-center space-x-1 sm:space-x-4'>

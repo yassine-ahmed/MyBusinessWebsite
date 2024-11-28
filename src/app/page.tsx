@@ -7,11 +7,11 @@ import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
+import PurchaseButton from "@/components/PurchaseButton";
 
 export default async function Home() {
 	const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
-  	const courses= await convex.query(api.courses.getCourses);
-	console.log(courses);
+	const courses = await convex.query(api.courses.getCourses);
 
 	return (
 		<div className='flex flex-col min-h-screen'>
@@ -22,7 +22,7 @@ export default async function Home() {
 					</h1>
 					<p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
 						Master fullstack skills through engaging, project-based learning. Unlock your potential with
-						MasterClass.
+						Yacoding.
 					</p>
 				</div>
 
@@ -48,8 +48,9 @@ export default async function Home() {
 								<Badge variant='default' className='text-lg px-3 py-1'>
 									${course.price.toFixed(2)}
 								</Badge>
-                <SignedIn>
-									Enroll
+
+								<SignedIn>
+									<PurchaseButton courseId={course._id} />
 								</SignedIn>
 
 								<SignedOut>
