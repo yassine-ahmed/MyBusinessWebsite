@@ -1,5 +1,5 @@
 import { SignedIn, SignedOut, SignInButton, SignOutButton, SignUpButton, UserButton } from "@clerk/nextjs";
-import { BookOpenIcon, CreditCardIcon, GraduationCap, LogOutIcon, ZapIcon } from "lucide-react";
+import { BookOpenIcon, CreditCardIcon, LogOutIcon, ZapIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
